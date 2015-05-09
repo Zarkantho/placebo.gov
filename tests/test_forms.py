@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import pytest
 
-from placebo.gov.public.forms import LoginForm
-from placebo.gov.user.forms import RegisterForm
+from placebo_gov.public.forms import LoginForm
+from placebo_gov.user.forms import RegisterForm
 from .factories import UserFactory
 
 class TestRegisterForm:

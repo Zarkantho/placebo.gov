@@ -2,8 +2,8 @@
 from factory import Sequence, PostGenerationMethodCall
 from factory.alchemy import SQLAlchemyModelFactory
 
-from placebo.gov.user.models import User
-from placebo.gov.database import db
+from placebo_gov.user.models import User
+from placebo_gov.database import db
 
 class BaseFactory(SQLAlchemyModelFactory):
 

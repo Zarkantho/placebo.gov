@@ -5,9 +5,9 @@ import os
 import pytest
 from webtest import TestApp
 
-from placebo.gov.settings import TestConfig
-from placebo.gov.app import create_app
-from placebo.gov.database import db as _db
+from placebo_gov.settings import TestConfig
+from placebo_gov.app import create_app
+from placebo_gov.database import db as _db
 
 from .factories import UserFactory
 

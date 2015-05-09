@@ -4,7 +4,7 @@ import datetime as dt
 
 import pytest
 
-from placebo.gov.user.models import User, Role
+from placebo_gov.user.models import User, Role
 from .factories import UserFactory
 
 @pytest.mark.usefixtures('db')

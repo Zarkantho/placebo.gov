@@ -4,12 +4,12 @@ from flask import (Blueprint, request, render_template, flash, url_for,
                     redirect, session)
 from flask.ext.login import login_user, login_required, logout_user
 
-from placebo.gov.extensions import login_manager
-from placebo.gov.user.models import User
-from placebo.gov.public.forms import LoginForm
-from placebo.gov.user.forms import RegisterForm
-from placebo.gov.utils import flash_errors
-from placebo.gov.database import db
+from placebo_gov.extensions import login_manager
+from placebo_gov.user.models import User
+from placebo_gov.public.forms import LoginForm
+from placebo_gov.user.forms import RegisterForm
+from placebo_gov.utils import flash_errors
+from placebo_gov.database import db
 
 blueprint = Blueprint('public', __name__, static_folder="../static")
 

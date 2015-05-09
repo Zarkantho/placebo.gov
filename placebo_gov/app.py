@@ -2,9 +2,9 @@
 '''The app module, containing the app factory function.'''
 from flask import Flask, render_template
 
-from placebo.gov.settings import ProdConfig
-from placebo.gov.assets import assets
-from placebo.gov.extensions import (
+from placebo_gov.settings import ProdConfig
+from placebo_gov.assets import assets
+from placebo_gov.extensions import (
     bcrypt,
     cache,
     db,
@@ -12,7 +12,7 @@ from placebo.gov.extensions import (
     migrate,
     debug_toolbar,
 )
-from placebo.gov import public, user
+from placebo_gov import public, user
 
 
 def create_app(config_object=ProdConfig):

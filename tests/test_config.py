@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from placebo.gov.app import create_app
-from placebo.gov.settings import ProdConfig, DevConfig
+from placebo_gov.app import create_app
+from placebo_gov.settings import ProdConfig, DevConfig
 
 def test_production_config():
     app = create_app(ProdConfig)

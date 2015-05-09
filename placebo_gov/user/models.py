@@ -3,8 +3,8 @@ import datetime as dt
 
 from flask_login import UserMixin
 
-from placebo.gov.extensions import bcrypt
-from placebo.gov.database import (
+from placebo_gov.extensions import bcrypt
+from placebo_gov.database import (
     Column,
     db,
     Model,

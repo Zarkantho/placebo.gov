@@ -2,7 +2,7 @@ from flask_wtf import Form
 from wtforms import TextField, PasswordField
 from wtforms.validators import DataRequired
 
-from placebo.gov.user.models import User
+from placebo_gov.user.models import User
 
 class LoginForm(Form):
     username = TextField('Username', validators=[DataRequired()])

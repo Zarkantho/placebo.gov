@@ -6,12 +6,12 @@ import subprocess
 from flask_script import Manager, Shell, Server
 from flask_migrate import MigrateCommand
 
-from placebo.gov.app import create_app
-from placebo.gov.user.models import User
-from placebo.gov.settings import DevConfig, ProdConfig
-from placebo.gov.database import db
+from placebo_gov.app import create_app
+from placebo_gov.user.models import User
+from placebo_gov.settings import DevConfig, ProdConfig
+from placebo_gov.database import db
 
-if os.environ.get("PLACEBO.GOV_ENV") == 'prod':
+if os.environ.get("PLACEBO_GOV_ENV") == 'prod':
     app = create_app(ProdConfig)
 else:
     app = create_app(DevConfig)

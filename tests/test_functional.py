@@ -7,7 +7,7 @@ import pytest
 from flask import url_for
 
 
-from placebo.gov.user.models import User
+from placebo_gov.user.models import User
 from .factories import UserFactory
 
 
