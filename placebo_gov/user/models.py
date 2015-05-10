@@ -14,6 +14,20 @@ from placebo_gov.database import (
 )
 
 
+class Post(SurrogatePK, Model):
+    __tablename__ = 'posts'
+    name = Column(db.String(80), unique=True, nullable=False)
+    title = Column(db.Text(), unique=False, nullable=False)
+    content = Column(db.Text(), unique=False, nullable=False)
+    user_id = ReferenceCol('users', nullable=True)
+    user = relationship('User', backref='posts')
+
+    def __init__(self, name, **kwargs):
+        db.Model.__init__(self, name=name, **kwargs)
+
+    def __repr__(self):
+        return '<Post({name})>'.format(name=self.name)
+
 class Role(SurrogatePK, Model):
     __tablename__ = 'roles'
     name = Column(db.String(80), unique=True, nullable=False)
