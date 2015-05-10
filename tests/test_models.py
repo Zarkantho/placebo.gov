@@ -55,3 +55,11 @@ class TestUser:
         u.roles.append(role)
         u.save()
         assert role in u.roles
+
+    def test_posts(self):
+        post = Post(title='My Post', content='Useless advice')
+        post.save()
+        u = UserFactory()
+        u.posts.append(post)
+        u.save()
+        assert post in u.posts
